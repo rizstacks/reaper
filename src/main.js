@@ -1,16 +1,18 @@
+import { GameOver } from './scenes/GameOver.js';
 import { Start } from './scenes/Start.js';
 
 const config = {
     type: Phaser.AUTO,
-    title: 'CMPM 120 Project Skeleton',
+    title: 'Reaper',
     description: '',
     parent: 'game-container',
     width: 1280,
     height: 720,
     backgroundColor: '#000000',
-    pixelArt: false,
+    pixelArt: true,
+    physics: {default: "arcade"},
     scene: [
-        Start
+        Start, GameOver
     ],
     scale: {
         mode: Phaser.Scale.FIT,
